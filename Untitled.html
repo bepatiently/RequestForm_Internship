@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Talep/İstek Formu</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <link href="stylesheet.css" rel="stylesheet">
+    <style media="screen">
+
+    </style>
+</head>
+
+<body>
+    <link href="stylesheet.css" rel="stylesheet">
+
+    <h1>Talep/İstek Formu</h1>
+
+    <form id="form-user" action="/submit" method="post">
+
+        <br>
+        <fieldset>
+            <legend>Talebi Açan Kişinin</legend>
+            <table>
+
+                <div class="form-box" data-errormsg="">
+
+                    <tr>
+                        <td>Sicil No: </td>
+                        <td><input name="fldRegistrationNo" type="number" id="fldRegistrationNo" required placeholder="Sicil No" /></td>
+                    </tr>
+                    <tr>
+                        <td>İsim: </td>
+                        <td><input name="fldName" type="fldName" id="fldName" required placeholder="İsim" /></td>
+                    </tr>
+                    <tr>
+                        <td>Soyisim: </td>
+                        <td><input name="fldSurname" type="fldSurname" id="fldSurname" required placeholder="Soyisim" /></td>
+                    </tr>
+                    <tr>
+                        <td>Bölüm: </td>
+                        <td><input name="fldDepartment" type="fldDepartment" id="fldDepartment" required placeholder="Bölüm" /></td>
+                    </tr>
+
+                </div>
+
+            </table>
+
+        </fieldset>
+        </br>
+
+
+        <br>
+        <fieldset>
+
+            <legend>Uygulama Talebi Açıklamaları</legend>
+
+            <table>
+
+                <div class="form-box" data-errormsg="">
+
+                    <tr>
+                        <td>Uygulama Adı: </td>
+                        <td><input name="fldAppName" type="fldAppName" id="fldAppName" required placeholder="Uygulama Adı" /></td>
+                    </tr>
+                    <tr>
+                        <td>Yazılım İsteği:</td>
+                        <td><textarea rows="8" cols="80" name="fldAppRequest" type="fldAppRequest" id="fldAppRequest" required placeholder="Lütfen yazılım isteği giriniz."></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>İstek Sebebi:</td>
+                        <td><textarea rows="8" cols="80" name="fldReqReason" type="fldReqReason" id="fldReqReason" required placeholder="Lütfen istek sebebini giriniz."></textarea></td>
+                    </tr>
+
+
+
+
+                    <br>
+                    <div class="container">
+                        <table>
+                            <tr>
+                                <td>İstek Çeşidi:</td>
+                            </tr>
+
+                            <td><label for="input-yeni"> Yeni Uygulama </label></td>
+                            <td><input name="true" type="radio" id="input-yeni" value="yeni uygulama" unchecked /></td>
+
+                            <td><label for="input-ek"> Ek Özellik </label></td>
+                            <td><input name="true" type="radio" id="input-ek" value="ek özellik" unchecked /></td>
+
+                            <td><label for="input-iyi"> İyileştirme Talebi </label></td>
+                            <td><input name="true" type="radio" id="input-iyi" value="İyileştirme" unchecked /></td>
+
+
+                        </table>
+                        </br>
+                    </div>
+
+
+                    <br>
+                    <table>
+
+
+                        <tr>
+                            <tr>
+                                <td>Uygulama Çeşidi:</td>
+                            </tr>
+
+                            <td>Mobil</td>
+                            <td><input name="mobil" type="checkbox" id="input-mobil" value="mobil" unchecked /></td>
+                            <td>Web</td>
+                            <td><input name="web" type="checkbox" id="input-web" value="web" unchecked /></td>
+                            <td>PLC</td>
+                            <td><input name="plc" type="checkbox" id="input-plc" value="plc" unchecked /></td>
+                            <td>Automata</td>
+                            <td><input name="automata" type="checkbox" id="input-automata" value="automata" unchecked/></td>
+                            <td>HMI Yazılım</td>
+                            <td><input name="hmi" type="checkbox" id="input-hmi" value="hmi" unchecked/></td>
+                        </tr>
+
+                    </table>
+                    </br>
+
+                </div>
+
+            </table>
+
+        </fieldset>
+        </br>
+
+
+        <br>
+        <fieldset>
+
+            <legend>Ek Bilgiler</legend>
+
+            <table>
+
+                <div class="form-box">
+
+                    <tr>
+                        <td>Ek Açıklamalar:</td>
+                        <td><textarea rows="8" cols="80" name="fldExplanation" type="fldExplanation" id="fldExplanation" required placeholder="Eklemek istediklerinizi varsa belirtiniz."></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>Bulunan Hatalar:</td>
+                        <td><textarea rows="8" cols="80" name="fldBugs" type="fldBugs" id="fldBugs" required placeholder="Eğer bir hata varsa belirtiniz."></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>Ek Dosyalar</td>
+                        <td><input type="file" id="file" name="file"></td>
+                    </tr>
+
+
+
+                </div>
+
+
+
+
+            </table>
+
+        </fieldset>
+        </br>
+
+        <div class=" form-box ">
+            <button id="button-cancel">İptal</button>
+            <button id="button-send">Formu Gönder</button>
+        </div>
+
+
+    </form>
+
+    <script src="lib/Untitled.js"></script>
+
+</body>
+
+</html>
